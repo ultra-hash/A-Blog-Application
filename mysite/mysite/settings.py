@@ -130,3 +130,11 @@ STATIC_DIR = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Email Server configuration
+EMAIL_HOST = environ.get('google_host')
+EMAIL_HOST_USER = environ.get('google_email_address')
+EMAIL_HOST_PASSWORD = environ.get('google_email_token')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
